@@ -1,4 +1,3 @@
-// Execute the code when the DOM content is loaded
 window.addEventListener("DOMContentLoaded", function () {
     const apiKey = "a9371c39d13d79c281a940956e8c3f34";
     const searchResultContainer = document.getElementById("searchResults");
