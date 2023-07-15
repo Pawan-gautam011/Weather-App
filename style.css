@@ -11,8 +11,12 @@
     background-color: #222;
     
   }
-  
-
+  .clear-icon{
+    display: none;
+  }
+  .clear-icon.active{
+    display: block;
+  }
   #searchResults.dark-mode {
     color: #fff;
   }
