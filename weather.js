@@ -7,6 +7,13 @@ window.addEventListener("DOMContentLoaded", function () {
     const submitBtn = document.getElementById("searchBtn");
     let cityName = '';
   
+  // Dark mode toggle
+  const darkModeToggle = document.getElementById("darkModeToggle");
+  const body = document.body;
+
+  darkModeToggle.addEventListener("change", function () {
+    body.classList.toggle("dark-mode");
+  });
 
     async function fetchWeatherData(cityName) {
       try {

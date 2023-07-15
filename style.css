@@ -5,7 +5,29 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
   }
+
+
+  body.dark-mode {
+    background-color: #222;
+    
+  }
   
+
+  #searchResults.dark-mode {
+    color: #fff;
+  }
+  .toggle{
+    float: right ;
+    margin-top: 5px;
+  }
+.toggle-label{
+  float: right;
+}
+  
+  #loader.dark-mode {
+    background-color: #fff;
+  }
+ 
   body{
     min-height: 100vh;
     display: flex;
@@ -17,10 +39,12 @@
   .container{
     width: 400px;
     height: min-content;
-    background-color: aliceblue;
+    background-color: rgba(29, 87, 138, 0.785);
     border-radius: 12px;
     padding: 28px;
+    box-shadow: 0 0 10px rgba(206, 206, 206, 0.906);
   }
+ 
   #searchResults{
     line-height: 40px;
     text-align: center;
@@ -106,11 +130,7 @@
     background-color: white;
     z-index: 99999;
   }
-  .error-message {
-    color: rgb(246, 29, 0);
-    margin-top: 50px;
-    font-size: 40px;
-}
+
   
   #loader img {
     width: 100px;
