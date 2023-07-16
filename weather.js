@@ -136,6 +136,14 @@ window.addEventListener("DOMContentLoaded", function () {
       }
     });
   
+    // displays clear form button only when the inputvalue length is greater than 0
+    if(cityNameInput.length > 0){
+      clear.classList.add('active')
+    }else{
+      clear.classList.remove('active')
+    }
+
+
     // Event listener for clear button click
     clear.addEventListener('click', function(){ 
       cityNameInput.value = '';
