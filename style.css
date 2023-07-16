@@ -12,7 +12,7 @@
     
   }
   
-
+  
   #searchResults.dark-mode {
     color: #fff;
   }
@@ -42,7 +42,7 @@
     background-color: rgba(29, 87, 138, 0.785);
     border-radius: 12px;
     padding: 28px;
-    box-shadow: 0 0 10px rgba(206, 206, 206, 0.906);
+    box-shadow: 0 0 10px rgba(222, 216, 216, 0.906);
   }
  
   #searchResults{
