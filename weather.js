@@ -6,19 +6,13 @@ window.addEventListener("DOMContentLoaded", function () {
     const cityNameInput = document.getElementById("cityName");
     const submitBtn = document.getElementById("searchBtn");
     let cityName = '';
-  
-  // Dark mode toggle
-  const darkModeToggle = document.getElementById("darkModeToggle");
-  const body = document.body;
+    const container = document.querySelector(".container")
 
-  darkModeToggle.addEventListener("change", function () {
-    body.classList.toggle("dark-mode");
-  });
+  const body = document.body;
 
     async function fetchWeatherData(cityName) {
       try {
         searchResultContainer.innerHTML = '';
-        loader.style.display = 'block';
   
     
         const response = await fetch(
@@ -82,26 +76,22 @@ window.addEventListener("DOMContentLoaded", function () {
           resultContainer.appendChild(tempElement);
           resultContainer.appendChild(pressureElement);
           resultContainer.appendChild(windSpeedElement);
+          resultContainer.appendChild(timeElement);
           resultContainer.appendChild(humidityElement);
           resultContainer.appendChild(dateElement);
-          resultContainer.appendChild(timeElement);
+          // resultContainer.appendChild();
   
           // Append the result container to the searchResultContainer
           searchResultContainer.appendChild(resultContainer);
-  
-          // Hide the loader
-          loader.style.display = 'none';
         } else {
           throw new Error("Sorry City NOt found");
         }
       } catch (error) {
         console.error(error);
         const errorMessage = document.createElement("p");
-        errorMessage.textContent = "Sorry city not found";
+        errorMessage.textContent = "CITY NOT FOUND";
+        errorMessage.classList.add("new-style")
         searchResultContainer.appendChild(errorMessage);
-  
-        // Hide the loader
-        loader.style.display = 'none';
       }
     }
   
@@ -158,7 +148,14 @@ window.addEventListener("DOMContentLoaded", function () {
       } else {
         clear.style.display = 'block';
       }
+   
     });
+   
   
     fetchWeatherData('Macclesfield');
+   
+   
+    this.window.onload=() =>{
+      clear.style.display='none';
+    }
   });

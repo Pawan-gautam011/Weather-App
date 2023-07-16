@@ -6,43 +6,36 @@
     font-family: 'Poppins', sans-serif;
   }
 
-
-  body.dark-mode {
-    background-color: #222;
-    
-  }
-  
-
-  #searchResults.dark-mode {
-    color: #fff;
-  }
-  .toggle{
-    float: right ;
-    margin-top: 5px;
-  }
-.toggle-label{
-  float: right;
+.new-style{
+  margin-bottom: 50px;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 1000;
+  color: #2A4747;
 }
-  
-  #loader.dark-mode {
-    background-color: #fff;
-  }
- 
+
   body{
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:  #2c3e50;
+    background-color:  #50D8D7;
   }
   
+
   .container{
-    width: 400px;
-    height: min-content;
-    background-color: rgba(29, 87, 138, 0.785);
-    border-radius: 12px;
-    padding: 28px;
-    box-shadow: 0 0 10px rgba(222, 216, 216, 0.906);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: -11px 16px 0px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
  
   #searchResults{
@@ -56,6 +49,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 25px;
+    scale: 0.9;
   }
   
   .input-container {
@@ -67,8 +62,6 @@
     width: 100%;
     font-size: 20px;
     text-transform: capitalize;
-    color: black;
-    background-color: skyblue;
     padding: 12px 16px;
     border-radius: 14px;
   }
@@ -84,7 +77,6 @@
     transform: translateY(-50%);
     width: 15px;
     height: 15px;
-    background: skyblue;
     cursor: pointer;
     z-index: 999;
   }
@@ -106,12 +98,13 @@
     background: black;
     transform: rotate(315deg);
   }
-  
+  textarea:focus, input:focus{
+    outline: none;
+}
   
   .search-box button{
     width: 46px;
     height: 46px;
-    background-color: skyblue;
     border-radius: 50%;
     cursor: pointer;
     font-size: 20px;
