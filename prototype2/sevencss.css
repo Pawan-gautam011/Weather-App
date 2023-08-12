@@ -1,0 +1,55 @@
+div.cityWeatherContainer2{
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 30px;
+}
+.cityWeather2{
+    width: 300px;   
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #2382f6;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+}
+img.weatherIcon2{
+    width: 100px;
+}
+nav.seven{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: #2382f6;
+    backdrop-filter: blur(100px);
+    width: 100vw;
+    height: 80px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.city2{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+.dayOfWeek2{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+.temperature2,
+.date2{
+    color: white;
+    font-size: 16px;
+}
+.temperature2{
+    font-size: 20px;
+    font-weight: 700;
+}
