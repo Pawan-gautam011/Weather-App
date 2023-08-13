@@ -1,5 +1,5 @@
 <?php
-// import the database.php to create database if not exist
+// Import the 'database.php' file to ensure the creation of the database if it doesn't already exist.
 include "database.php";
 $servername = "localhost";
 $username = "root";
@@ -29,7 +29,7 @@ if (!$conn) {
             !isset($data->windSpeed) ||
             !isset($data->humidity)
         ) {
-            http_response_code(400); // Bad Request
+            http_response_code(400); // if not found
             echo json_encode(["error" => "Invalid data."]);
             exit();
         }

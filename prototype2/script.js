@@ -1,8 +1,8 @@
 // Wait for the DOM content to load before executing the code
 document.addEventListener("DOMContentLoaded", function () {
-  // Get references to the required elements
+   // Get references to the necessary elements
   const searchResultContainer = document.querySelector(".searchResults");
-  const apiKey = "b44b4c401a429dfca47ce0dfc6eb184d";
+  const apiKey = "a9371c39d13d79c281a940956e8c3f34";
   const loader = document.getElementById("loader");
   const clear = document.getElementById("clear");
   const searchButton = document.querySelector(".searchBar button");
@@ -10,22 +10,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to fetch weather data for a given city
   async function fetchData(cityName) {
-    searchResultContainer.innerHTML = ""; // Clear the previous data
+    searchResultContainer.innerHTML = ""; // Clear previous data and show loader
     loader.style.display = "block";
 
     // Fetch weather data from the API
     const data = await fetchWeatherData(cityName);
 
-    // Check if data is available
+     // Display weather information
     if (data) {
       createWeatherElement(data);
-      sendData(data);
+      sendData(data);// Send collected weather data
     } else {
       // Display "City Not Found" if data is not available
       const cityNotFound = document.createElement("h1");
       cityNotFound.classList.add("error");
       cityNotFound.innerHTML = "City Not Found";
       searchResultContainer.appendChild(cityNotFound);
+      cityNotFound.style.display = "inline";
+      cityNotFound.style.textalign = "center";
     }
     loader.style.display = "none";
     return data;
@@ -97,23 +99,23 @@ document.addEventListener("DOMContentLoaded", function () {
   function createWeatherElement(data) {
     let ImageElement = document.getElementById("image");
     if (data.weatherIcon == "01d" || data.weatherIcon == "01n") {
-      ImageElement.src = "image/clearTe.png";
+      ImageElement.src = "clearTe.png";
     } else if (data.weatherIcon == "02d" || data.weatherIcon == "02n") {
-      ImageElement.src = "image/mist.png";
+      ImageElement.src = "mist.png";
     } else if (data.weatherIcon == "03d" || data.weatherIcon == "03n") {
-      ImageElement.src = "image/clouds.png";
+      ImageElement.src = "clouds.png";
     } else if (data.weatherIcon == "04d" || data.weatherIcon == "04n") {
-      ImageElement.src = "image/clouds.png";
+      ImageElement.src = "clouds.png";
     } else if (data.weatherIcon == "09d" || data.weatherIcon == "09n") {
-      ImageElement.src = "image/rain.png";
+      ImageElement.src = "rain.png";
     } else if (data.weatherIcon == "10d" || data.weatherIcon == "10n") {
-      ImageElement.src = "image/rain.png";
+      ImageElement.src = "rain.png";
     } else if (data.weatherIcon == "11d" || data.weatherIcon == "11n") {
-      ImageElement.src = "image/rain.png";
+      ImageElement.src = "rain.png";
     } else if (data.weatherIcon == "13d" || data.weatherIcon == "13n") {
-      ImageElement.src = "image/snow.png";
+      ImageElement.src = "snow.png";
     } else if (data.weatherIcon == "50d" || data.weatherIcon == "50n") {
-      ImageElement.src = "image/windspeed.png";
+      ImageElement.src = "windspeed.png";
     }
     console.log(data.weatherIcon);
     document.getElementById(

@@ -5,7 +5,7 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #2382f6;
+    background-color:  #50D8D7;
 }
 
 .searchBar{
@@ -18,7 +18,7 @@ body{
     padding: 10px;
     width: 500px;
     border: 0;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     border-radius: 4px;
 }
@@ -26,12 +26,16 @@ body{
     outline: 0;
 }
 .searchBar button{
-    background-color: #22C55E;
+    background-color: #0d7b72;
     border: 0;
-    color: white;
+    color: rgb(12, 6, 6);
     padding: 10px;
-    font-size: 16px;
-    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;    border-radius: 4px;
+    font-size: 1rem;
+    box-shadow: rgba(4, 4, 6, 0.05) 0px 10px 10px, rgba(17, 17, 26, 0.1) 0px 0px 80px; 
+    border-radius: 4px;
+    cursor: pointer;
+
+
 }
 .searchBar button:focus{
     outline: 0;
@@ -44,8 +48,12 @@ body{
     display: flex;
     align-items: center;
     gap: 50px;
-    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-    border-radius: 4px;
+    background: transparent;
+    box-shadow: 0 40px 8px 0 rgba(21, 121, 32, 0.37);
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .center{
     display: flex;
@@ -56,14 +64,13 @@ img{
     height: auto    ;
 }
 #name{
-    font-size: 80px;
-    margin-top: -50px;
-    color: white;
-    font-weight: 600;
+    font-size: 4rem;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
 }
 #temperature{
-    font-size: 95px;
-    color: white;
+    font-size: 6rem;
+    color: rgb(3, 2, 2);
     font-weight: 700;
 }
 .flex{
@@ -74,16 +81,17 @@ img{
     display: flex;
     justify-content: center;
     gap: 30px;
-    color: white;
+    color: rgb(7, 5, 5);
     font-weight: 600;
     font-size: 25px;
     padding: 30px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border-radius: 8px;
     background-color: #2382f63d;
+
 }
 #date , #time{
-    color: white;
+    color: rgb(14, 10, 10);
     font-weight: 600;
     font-size: 25px;
     margin-top: 20px;
@@ -91,10 +99,9 @@ img{
 }
 .ez{
     margin: 10px 10px;
-    margin-top: -10px;
     width: 500px;
     height: 5px;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     border-radius: 2px;
     border: 0;
     margin-bottom: 20px;
@@ -106,11 +113,11 @@ span{
 }
 .flex-name{
     display: flex;
-    color: white;
+    color: rgb(6, 3, 3);
     font-size: 15px;
 }
 .error{
-    background-color: rgb(0, 166, 255);
+    background-color: red;
     color: white;
     padding: 10px;
     margin-top: 30px;
@@ -128,3 +135,14 @@ span{
     margin-top: 20px;
     height: auto;
 }
+
+
+
+
+
+
+
+
+
+
+

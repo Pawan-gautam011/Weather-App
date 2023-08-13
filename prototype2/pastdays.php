@@ -6,16 +6,16 @@
     <title>Weather Forecaster</title>
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="sevencss.css">
+    <link rel="stylesheet" href="7days.css">
 </head>
-<body>
+<body>        
     <?php
     $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "weatherapp";
 
-    // Create connection
+    //  connection
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     // Check connection
@@ -23,7 +23,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    echo "<h1 class='top'>Weather from Previous 7 days</h1>";
+    echo "<h1 class='top'>Past 7 days weather</h1>";
     // Calculate the date 7 days ago from today
     $sevenDaysAgo = date('Y-m-d', strtotime('-6 days'));
 

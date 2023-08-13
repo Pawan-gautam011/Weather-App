@@ -4,7 +4,7 @@ $username = "root";
 $password = ""; 
 $database = "weatherapp"; 
 
-// Create a connection
+// connection creating
 $conn = new mysqli($servername, $username, $password);
 
 // Check the connection
@@ -12,18 +12,18 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Check if the database exists
+// checcking for data existing
 $query = "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '$database'";
 $result = $conn->query($query);
 
 if ($result->num_rows == 0) {
-    // The database doesn't exist, so let's create it
+    // if database does't exist let's make it 
     $createDatabaseQuery = "CREATE DATABASE $database";
     if ($conn->query($createDatabaseQuery) === TRUE) {
         echo "Database created successfully<br>";
 
-        // Now, let's create the table to store weather data
-        $conn->select_db($database); // Select the newly created database
+        // Table for data
+        $conn->select_db($database); /*newly selected data*/
 
         $createTableQuery = "
             CREATE TABLE weatherdata (

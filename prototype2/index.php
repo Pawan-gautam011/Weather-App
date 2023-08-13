@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Forecaster</title>
-    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+    <!-- <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon"> -->
     <link rel="stylesheet" href="style.css"/>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script src="weather.js" defer></script>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="searchBar">
@@ -28,7 +28,7 @@
     <div class="line1"></div>
     <div class="loaderflex">
       <div id="loader">
-        <img src="assets/loader.gif" alt="loader" width="200px"  class="loaderimage"/>
+        <img src="loader1.gif" alt="loader" width="200px"  class="loaderimage"/>
       </div>
      </div>
     <div class="line2"></div>
@@ -57,8 +57,7 @@
           </div>
         </div>
       </div>
-    </div>
-  <?= include ('7days.php') ?>
-
+    </div>    
+  <?= include ('pastdays.php') ?>
   </body>
 </html>

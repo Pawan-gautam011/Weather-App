@@ -11,12 +11,17 @@ div.cityWeatherContainer2{
     height: auto;
     padding: 20px;
     text-align: center;
-    background-color: #2382f6;
+    background-color: #0f8783;
+    color: #000;
     border-radius: 5px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 h1{
-    color: white;
+    color: rgb(31, 21, 21);
     text-align: center;
     margin-top: 50px;
     font-size: 50px;
@@ -28,25 +33,26 @@ nav.seven{
     display: flex;
     justify-content: center;
     align-self: center;
-    background-color: #2382f6;
+    background-color: #0aff1e;
     backdrop-filter: blur(100px);
     width: 100vw;
     height: 80px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+
 }
 .city2{
-    color: white;
+    color: rgb(8, 5, 5);
     font-size: 20px;
     font-weight: 700;
 }
 .dayOfWeek2{
-    color: white;
+    color: rgb(12, 9, 9);
     font-size: 16px;
     font-weight: 500;
 }
 .temperature2,
 .date2{
-    color: white;
+    color: rgb(13, 8, 8);
     font-size: 16px;
 }
 .temperature2{
